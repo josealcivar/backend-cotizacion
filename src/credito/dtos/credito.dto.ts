@@ -13,97 +13,39 @@ import { PartialType, ApiProperty } from '@nestjs/swagger';
 
 export class CreateCreditoDto {
   @IsString()
-  @IsNotEmpty()
-  @ApiProperty({ description: `product's name` })
+  @ApiProperty({ description: `credito's name` })
   readonly name: string;
 
-  @IsString()
+  @IsNumber()
   @IsNotEmpty()
+  @IsPositive()
   @ApiProperty()
-  readonly description: string;
+  readonly abono_normal: number;
 
   @IsNumber()
   @IsNotEmpty()
   @IsPositive()
   @ApiProperty()
-  readonly precio1: number;
-
-  @IsNumber()
-  @IsNotEmpty()
-  @IsPositive()
-  @ApiProperty()
-  readonly precio2: number;
-
-  @IsNumber()
-  @IsNotEmpty()
-  @IsPositive()
-  @ApiProperty()
-  readonly precio3: number;
-
-  @IsNumber()
-  @IsNotEmpty()
-  @IsPositive()
-  @ApiProperty()
-  readonly precio4: number;
-
-  @IsNumber()
-  @IsNotEmpty()
-  @IsPositive()
-  @ApiProperty()
-  readonly precio5: number;
-
-  @IsNumber()
-  @IsNotEmpty()
-  @ApiProperty()
-  readonly stock: number;
-
-  @IsNotEmpty()
-  @ApiProperty()
-  readonly en_oferta: string;
-
-  @IsNotEmpty()
-  @ApiProperty()
-  readonly en_destacado: string;
-
-  @IsNotEmpty()
-  @ApiProperty()
-  readonly tiene_impuesto: string;
-
-  @IsNotEmpty()
-  @ApiProperty()
-  readonly estado: string;
-
-  @IsUrl()
-  @IsNotEmpty()
-  @ApiProperty()
-  readonly image: string;
+  readonly abono_puntual: number;
 
   @IsNumber()
   @IsPositive()
   @IsNotEmpty()
   @ApiProperty()
-  readonly lineaId: number;
+  readonly productoSku: number;
 
   @IsNumber()
   @IsPositive()
   @IsNotEmpty()
   @ApiProperty()
-  readonly grupoId: number;
-
-  @IsPositive()
-  @ApiProperty()
-  readonly brandId: number;
-
-  @IsArray()
-  @ApiProperty()
-  readonly categoriesIds: number[];
+  readonly plazoId: number;
 }
 
 // partialtype pide las mismas validaciones
 // pero con que es opcional cada campo
-export class UpdateProductDto extends PartialType(CreateProductDto) {}
+export class UpdateCreditoDto extends PartialType(CreateCreditoDto) {}
 
-export class FilterProductsDto {
+export class FilterCreditoDto {
   @IsOptional()
   @IsPositive()
   limit: number;
@@ -111,12 +53,4 @@ export class FilterProductsDto {
   @IsOptional()
   @Min(0)
   offset: number;
-
-  @IsOptional()
-  @IsPositive()
-  minPrice: number;
-
-  @ValidateIf((item) => item.minPrice)
-  @IsPositive()
-  maxPrice: number;
 }

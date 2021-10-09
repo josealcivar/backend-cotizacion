@@ -1,4 +1,4 @@
-import { Producto } from '../products/producto.entity';
+import { Producto } from '../productos/producto.entity';
 import { Plazo } from '../plazos/plazo.entity';
 import {
   PrimaryGeneratedColumn,
@@ -36,11 +36,11 @@ export class Credito {
   updateAt: Date;
 
   @ManyToOne(() => Producto, (producto) => producto.producto_sku)
-  @JoinColumn({ name: 'producto_sku' })
+  @JoinColumn({ name: 'productoSku' })
   producto: Producto;
 
   @ManyToOne(() => Plazo, (plazo) => plazo.id)
-  @JoinColumn({ name: 'plazo' })
+  @JoinColumn({ name: 'plazoId' })
   plazo: Plazo;
 
   //   @OneToMany(() => Producto, (item) => item.producto_sku)
