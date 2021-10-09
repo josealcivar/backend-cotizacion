@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { CreditoController } from './credito.controller';
+import { CreditoController } from './controller/credito.controller';
 
 @Module({
-  controllers: [CreditoController]
+  controllers: [CreditoController],
 })
 export class CreditoModule {}

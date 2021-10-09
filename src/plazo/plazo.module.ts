@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { PlazoController } from './plazo.controller';
+import { PlazoController } from './controller/plazo.controller';
 
 @Module({
-  controllers: [PlazoController]
+  controllers: [PlazoController],
 })
 export class PlazoModule {}
