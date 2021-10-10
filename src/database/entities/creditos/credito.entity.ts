@@ -15,10 +15,10 @@ export class Credito {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({ type: 'decimal', precision: 2, scale: 5, nullable: true })
+  @Column({ type: 'decimal', precision: 8, scale: 2, nullable: true })
   abono_normal: number;
 
-  @Column({ type: 'decimal', precision: 2, scale: 5, nullable: true })
+  @Column({ type: 'decimal', precision: 8, scale: 2, nullable: true })
   abono_puntual: number;
 
   @CreateDateColumn({

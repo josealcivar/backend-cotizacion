@@ -27,10 +27,13 @@ const API_KEY_PROD = 'PROD1212121SA';
           password, //'123456',
           port,
           synchronize: false,
-          ssl:
-            process.env.NODE_ENV === 'prod'
-              ? { rejectUnauthorized: false }
-              : true,
+          ssl: {
+            rejectUnauthorized: false,
+          },
+          // ssl:
+          //   process.env.NODE_ENV === 'prod'
+          //     ? { rejectUnauthorized: false }
+          //     : true,
           autoLoadEntities: true,
           entities: [Credito, Plazo, Producto],
         };
@@ -54,10 +57,14 @@ const API_KEY_PROD = 'PROD1212121SA';
           database: dbName, //'my_db',
           password: password, //'123456',
           port: port,
-          ssl:
-            process.env.NODE_ENV === 'prod'
-              ? { rejectUnauthorized: false }
-              : true,
+          ssl: {
+            rejectUnauthorized: false,
+          },
+          // sslmode: 'require',
+          // ssl:
+          //   process.env.NODE_ENV === 'prod'
+          //     ? { rejectUnauthorized: false }
+          //     : true,
           autoLoadEntities: true,
         });
 

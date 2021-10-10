@@ -17,10 +17,10 @@ export class Plazo {
   @Column({ type: 'text' })
   periodo: string;
 
-  @Column({ type: 'decimal', precision: 2, scale: 5, nullable: true })
+  @Column({ type: 'real', nullable: true })
   normal: number;
 
-  @Column({ type: 'decimal', precision: 2, scale: 5, nullable: true })
+  @Column({ type: 'real', nullable: true })
   puntual: number;
 
   @CreateDateColumn({

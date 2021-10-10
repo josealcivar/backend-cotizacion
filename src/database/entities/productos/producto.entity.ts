@@ -22,7 +22,7 @@ export class Producto {
   description: string;
 
   @Column({ type: 'int' })
-  pricio: number;
+  precio: number;
 
   @CreateDateColumn({
     name: 'create_at',
