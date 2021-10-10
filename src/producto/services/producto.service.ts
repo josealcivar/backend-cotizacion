@@ -9,10 +9,10 @@ import {
   UpdateProductoDto,
 } from './../dtos/producto.dto';
 import { Repository, Between, FindConditions } from 'typeorm';
-// import { BrandsService } from './../services/brands.service';
+//  import { ProductoService } from './../services/brands.service';
 
 @Injectable()
-export class ProductsService {
+export class ProductoService {
   constructor(
     @InjectRepository(Producto) private productoRepo: Repository<Producto>,
   ) {}

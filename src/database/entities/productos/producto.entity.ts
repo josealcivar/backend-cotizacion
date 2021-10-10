@@ -13,6 +13,8 @@ import {
 // @Index(['price', 'stock'])
 export class Producto {
   @PrimaryGeneratedColumn()
+  id: number;
+
   @Column({ type: 'varchar', length: 255, unique: true })
   producto_sku: string;
 

@@ -14,7 +14,7 @@ export class Plazo {
   @Column({ type: 'int' })
   numero: string;
 
-  @Column({ type: 'string' })
+  @Column({ type: 'text' })
   periodo: string;
 
   @Column({ type: 'decimal', precision: 2, scale: 5, nullable: true })
