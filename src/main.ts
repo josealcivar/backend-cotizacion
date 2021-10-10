@@ -17,8 +17,8 @@ async function bootstrap() {
   app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
 
   const config = new DocumentBuilder()
-    .setTitle('API')
-    .setDescription('Cotizacion Backend')
+    .setTitle('API BACKEND COTIZACION')
+    .setDescription('Prueba de Backend vacante Banco Azteca')
     .setVersion('1.0')
     .build();
   const document = SwaggerModule.createDocument(app, config);
