@@ -25,7 +25,7 @@ const API_KEY_PROD = 'PROD1212121SA';
           host, //'localhost',
           database: dbName, //'my_db',
           password, //'123456',
-          port,
+          // port,
           synchronize: false,
           ssl: {
             rejectUnauthorized: false,
@@ -56,7 +56,7 @@ const API_KEY_PROD = 'PROD1212121SA';
           host: host, //'localhost',
           database: dbName, //'my_db',
           password: password, //'123456',
-          port: port,
+          // port: port,
           ssl: {
             rejectUnauthorized: false,
           },
