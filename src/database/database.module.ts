@@ -60,14 +60,16 @@ const API_KEY_PROD = 'PROD1212121SA';
           database: dbName, //'my_db',
           password: password, //'123456',
           port: port,
-          ssl: {
-            rejectUnauthorized: false,
-          },
+          // ssl: {
+          //   rejectUnauthorized: false,
+          // },
           // sslmode: 'require',
-          // ssl:
-          //   process.env.NODE_ENV === 'prod'
-          //     ? { rejectUnauthorized: false }
-          //     : true,
+          ssl: true,
+          extra: {
+            ssl: {
+              rejectUnauthorized: false,
+            },
+          },
           autoLoadEntities: true,
         });
 
