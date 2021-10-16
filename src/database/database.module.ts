@@ -75,7 +75,7 @@ const API_KEY_PROD = 'PROD1212121SA';
 
         client.connect();
         return client;
-      }, //client,
+      },
       inject: [config.KEY],
     },
   ],
